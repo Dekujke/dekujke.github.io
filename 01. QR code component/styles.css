@@ -1,0 +1,86 @@
+:root {
+    --background: hsl(212, 45%, 89%);
+    --card-background: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background: var(--background);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* qr-card start */
+
+.qr-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: var(--card-background);
+    padding: 10px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    max-width: 280px;
+    font-size: 1.5rem;
+}
+
+.img-container {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 15px;
+}
+
+.qr-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-weight: 400;
+}
+
+/* qr-card end */
+
+/* footer start */ 
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+}
+
+.attribution {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* footer end */
