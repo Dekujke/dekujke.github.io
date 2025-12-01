@@ -1,6 +1,7 @@
 :root {
     --background: #ede5d8;
-    --text: #2D1F1A;
+    --text: #271c18;
+    --hover: #a8672a;
 }
 
 * {
@@ -20,6 +21,32 @@ body {
     min-height: 100vh;
 }
 
+.header {
+    right: 0;
+    top: 0;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+.menu-list {
+    float: left;
+}
+
+.menu-link {
+    display: block;
+    padding: 20px 25px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.menu-link:hover {
+    color: var(--hover);
+    border-bottom: 3px solid var(--hover);
+}
+
 .title {
     font-size: 10rem;
     padding-bottom: 10px;
@@ -33,6 +60,10 @@ body {
 }
 
 /* other start */
+
+.position-absolute {
+    position: absolute;
+}
 
 .flex {
     display: flex;
