@@ -1,0 +1,277 @@
+:root {
+    --background: hsl(210, 46%, 95%);
+
+    --article-background: #fff;
+    --social-media-background: hsl(217, 19%, 35%);
+    
+    --btn-hover: hsl(214, 17%, 51%);
+
+    --text: hsl(212, 23%, 69%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    background: var(--background);
+    min-height: 100vh;
+    font-size: 1.3rem;
+}
+
+/* main start */
+
+.content {
+    background-color: var(--article-background);
+    border-radius: 10px;
+    box-shadow: 25px 40px 40px -20px rgba(0, 0, 0, 0.3);
+}
+
+.img-container {
+    max-width: 285px;
+    /*max-height: 280px;*/
+}
+
+.drawer-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.article-container {
+    padding: 25px 40px;
+    color: var(--text);
+}
+
+.article-title {
+    color: var(--social-media-background);
+    font-size: 2rem;
+    max-width: 345px;
+    margin-bottom: 25px;
+}
+
+.article-text {
+    max-width: 355px;
+    margin-bottom: 30px;
+}
+
+.article-footer {
+    width: 100%;
+}
+
+.author-photo-container {
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 20px;
+}
+
+.author-photo {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name {
+    color: var(--social-media-background);
+}
+
+.author-date {
+    color: var(--text);
+}
+
+.share-btn {
+    background-color: var(--background);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.share-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.share-img {
+    fill: var(--btn-hover);
+}
+
+.share-btn:hover .share-img {
+    fill: #fff;
+}
+
+.share-container {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    top: -260%;
+    right: -360%;
+    color: var(--text);
+    background-color: var(--social-media-background);
+    padding: 15px 40px;
+    min-width: 245px;
+    border-radius: 10px;
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border: 10px solid var(--social-media-background);
+    border-color: var(--social-media-background) transparent transparent transparent;
+}
+
+.tooltip-text {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* main end */
+
+/* footer start */
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+}
+
+.attribution {
+    font-size: 1.1rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* footer end */
+
+/* other start */
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.normal {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    background-color: var(--btn-hover);
+}
+
+.fill {
+    fill: #fff;
+}
+
+/* other end */
+
+@media screen and (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-container {
+        max-width: 330px;
+        max-height: 200px;
+        overflow: hidden;
+    }
+
+    .drawer-img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .article-container {
+        padding: 40px 30px 25px 30px;
+    }
+
+    .article-title {
+        max-width: 260px;
+        font-size: 1.6rem;
+    }
+
+    .article-text {
+        max-width: 265px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .article-container {
+        padding-bottom: 15px;
+    }
+
+    .share-btn {
+        z-index: 1;
+    }
+
+    .tooltip {
+        right: -100%;
+        top: -48%;
+        min-width: 330px;
+        border-radius: 0 0 10px 10px;
+        padding: 20px 120px 20px 35px;
+    }
+
+    .tooltip::before {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .img-container {
+        max-width: 305px;
+        max-height: 170px;
+    }
+
+    .article-container {
+        padding: 30px 20px 15px 20px;
+    }
+
+    .tooltip {
+        right: -67%;
+        min-width: 305px;
+    }
+}
