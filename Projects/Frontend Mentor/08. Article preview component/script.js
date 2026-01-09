@@ -1,6 +1,6 @@
-shareBtn = document.getElementById("share-btn");
-shareImg = document.getElementById("share-img");
-tooltip = document.getElementById("tooltip");
+const shareBtn = document.getElementById("share-btn");
+const shareImg = document.getElementById("share-img");
+const tooltip = document.getElementById("tooltip");
 
 shareBtn.addEventListener("click", () => {
     shareBtn.classList.toggle("active");
